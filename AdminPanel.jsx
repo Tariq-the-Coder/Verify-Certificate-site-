@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-// import { addStudentData } from "./data";
 import axios from "axios"
 import Spinner from 'react-bootstrap/Spinner';
 import Alert from 'react-bootstrap/Alert';
@@ -130,7 +129,7 @@ const AdminPanel = () => {
             required={true}
           >
           <option value="">Select a Course</option>
-          <option value="Basic">Computer BASIC</option>
+          <option value="Computer Basic">Computer Basic</option>
           <option value="Typing">TYPING</option>
           <option value="Internet">Internet</option>
           <option value="Photoshop">Photoshop</option>
@@ -140,7 +139,16 @@ const AdminPanel = () => {
           <option value="C++ Programming">C++ Programming</option>
           <option value="Visual Basic Programming">Visual Basic Programming</option>
           <option value="Oracle(SQL/PLSQL)">Oracle(SQL/PLSQL)</option>
-          <option value="MS Office">MS OFFICE - WORD, EXCEL, POWERPOINT, ACCESS, ETC.</option>
+          <option value="Inpage Urdu">Inpage Urdu</option>
+          <option value="Punjabi Typing">Punjabi Typing</option>
+          <option value="Computer Hardware">Computer Hardware</option>
+          <option value="Office Automation">Office Automation</option>
+          <option value="Accounting in Tally">Accounting in Tally</option>
+          <option value="Certificate in Computer Application (CCA)">Certificate in Computer Application (CCA)</option>
+          <option value="Diploma in Computer Application (DCA)">Diploma in Computer Application (DCA)</option>
+          <option value="Diploma in Computer Hardware & Networking">Diploma in Computer Hardware & Networking</option>
+          <option value="Diploma in Finance Accounting Tally & Busy (DFA)">Diploma in Finance Accounting Tally & Busy (DFA)</option>
+          <option value="MS OFFICE - WORD, EXCEL, POWERPOINT, ACCESS, ETC.">MS OFFICE - WORD, EXCEL, POWERPOINT, ACCESS, ETC.</option>
           </Form.Control>
         </Form.Group>
 
@@ -171,6 +179,7 @@ const AdminPanel = () => {
             value={studentData.date}
             onChange={handleChange}
             required={true}
+            dateFormat="dd/MM/yyyy"
           />
         </Form.Group>
 
