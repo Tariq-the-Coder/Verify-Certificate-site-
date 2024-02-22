@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import axios from "axios";
 import Spinner from "react-bootstrap/Spinner";
+import Certificate from "./Certificate";
 
 const CertificateVerify = () => {
   const [searchEnrollmentNumber, setSearchEnrollmentNumber] = useState("");
@@ -12,6 +13,9 @@ const CertificateVerify = () => {
     e.preventDefault();
     setLoading(true);
     console.log(searchEnrollmentNumber);
+    if (searchEnrollmentNumber ==="") {
+      alert("Please Enter your Enrollment Number")
+    }
     try {
       const response = await axios.get(
         `http://localhost:2000/search?enrollmentNumber=${searchEnrollmentNumber}`
@@ -36,6 +40,7 @@ const CertificateVerify = () => {
           value={searchEnrollmentNumber}
           onChange={(e) => setSearchEnrollmentNumber(e.target.value)}
           placeholder="Enter Enrollment Number"
+          required
         />
         {loading ? (
           <Spinner animation="border" variant="primary" />
@@ -45,21 +50,7 @@ const CertificateVerify = () => {
           </button>
         )}
 
-        {searchResult && (
-          <Card className="mt-5">
-          <Card.Body>
-          <h2 className="mb-5">
-          Search Result
-          </h2>
-            <h5 className="mb-4" > Name: {searchResult.studentName}</h5>
-            <h5 className="mb-4">Father's Name:{searchResult.fatherName}</h5>
-            <h5 className="mb-2">Enrollment Number:{searchResult.enrollmentNumber}</h5>
-            <h5 className="mb-2">Coruse:{searchResult.course}</h5>
-            <h5 className="mb-2">Grade:{searchResult.grade}</h5>
-            <h5 className="mb-2">Date:{searchResult.date}</h5>
-          </Card.Body>
-          </Card>
-        )}
+        {searchResult && (<Certificate searchResult={searchResult} />)}
       </div>
     </div>
   );
