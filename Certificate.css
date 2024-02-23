@@ -183,3 +183,11 @@
     }
   }
 }
+.certificate-form-box{
+  display: flex;
+  justify-content: center;
+}
+.btnbox{
+  display: flex;
+  justify-content: center;
+}
