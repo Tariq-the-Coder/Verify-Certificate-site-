@@ -39,7 +39,7 @@
 .pm-certificate-container {
     margin-top: 5rem;
   position: relative;
-  width: 800px;
+  width: 800px !important;
   height: 600px;
   background-color: #618597;
   padding: 30px;

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Card from "react-bootstrap/Card";
 import axios from "axios";
 import Spinner from "react-bootstrap/Spinner";
 import Alert from "react-bootstrap/Alert";
@@ -87,6 +86,8 @@ const CertificateVerify = () => {
           </div>
         </Form>
 
+      </div>
+      <div className="certificateshow text-center">
         {searchResult && <Certificate searchResult={searchResult} />}
       </div>
     </div>
