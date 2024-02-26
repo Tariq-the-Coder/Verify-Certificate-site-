@@ -12,6 +12,8 @@ const AdminPanel = () => {
     enrollmentNumber: "",
     course: "",
     grade:"",
+    startdate:"",
+    enddate:"",
     date:""
   });
   const [loading, setLoading] = useState(false);
@@ -137,6 +139,8 @@ const AdminPanel = () => {
           <option value="HTML CSS JSP">HTML CSS JavaScript</option>
           <option value="C Programming">C Programming</option>
           <option value="C++ Programming">C++ Programming</option>
+          <option value="Python Programming">Python Programming</option>
+          <option value="Dekstop Publishing">Dekstop Publishing</option>
           <option value="Visual Basic Programming">Visual Basic Programming</option>
           <option value="Oracle(SQL/PLSQL)">Oracle(SQL/PLSQL)</option>
           <option value="Inpage Urdu">Inpage Urdu</option>
@@ -171,17 +175,43 @@ const AdminPanel = () => {
           </Form.Control>
         </Form.Group>
 
+        <div style={{display:"flex"}}>
         <Form.Group className="mb-3" controlId="Date">
-          <Form.Label>Date of issue</Form.Label>
+          <Form.Label>Institude Joined Date</Form.Label>
+          <Form.Control
+            type="date"
+            name="date"
+            value={studentData.startdate}
+            onChange={handleChange}
+            required={true}
+          />
+        </Form.Group>
+
+        <Form.Group style={{marginLeft:"1rem"}} className="mb-3" controlId="Date">
+          <Form.Label>To </Form.Label>
+          <Form.Control
+            type="date"
+            name="date"
+            value={studentData.enddate}
+            onChange={handleChange}
+            required={true}
+          />
+        </Form.Group>
+
+        </div>
+
+        
+        <Form.Group className="mb-3" controlId="Date">
+          <Form.Label>Certificate issue Date</Form.Label>
           <Form.Control
             type="date"
             name="date"
             value={studentData.date}
             onChange={handleChange}
             required={true}
-            dateFormat="dd/MM/yyyy"
           />
         </Form.Group>
+
 
         {loading ? (
           <Spinner animation="border" variant="danger" />
