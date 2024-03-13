@@ -19,13 +19,14 @@ const Navbar_Main = () => {
 
   const handlelogout =()=>{
     localStorage.removeItem('user');
+    window.location.href = "http://localhost:3000/Login";
   }
 
   return (
     <div>
       <Navbar bg="primary" data-bs-theme="dark">
         <Container>
-          <Link className="navbar-brand" to={"/"} > Navbar</Link>
+          <Link className="navbar-brand" to={"/"} > ACCEd</Link>
           <Nav className="me-auto">
           <Link className='nav-link' to={"/"} >Home</Link>
           <Link className='nav-link' to={"/CertificateVerify"} >CertificateVerify</Link>
