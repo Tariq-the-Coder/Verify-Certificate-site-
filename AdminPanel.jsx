@@ -63,6 +63,8 @@ const AdminPanel = () => {
       enrollmentNumber: "",
       course: "",
       grade:"",
+      startdate:"",
+      enddate:"",
       date:""
     })
   };
@@ -176,22 +178,22 @@ const AdminPanel = () => {
         </Form.Group>
 
         <div style={{display:"flex"}}>
-        <Form.Group className="mb-3" controlId="Date">
+        <Form.Group className="mb-3" controlId="startDate">
           <Form.Label>Institude Joined Date</Form.Label>
           <Form.Control
             type="date"
-            name="date"
+            name="startdate"
             value={studentData.startdate}
             onChange={handleChange}
             required={true}
           />
         </Form.Group>
 
-        <Form.Group style={{marginLeft:"1rem"}} className="mb-3" controlId="Date">
+        <Form.Group style={{marginLeft:"1rem"}} className="mb-3" controlId="endDate">
           <Form.Label>To </Form.Label>
           <Form.Control
             type="date"
-            name="date"
+            name="enddate"
             value={studentData.enddate}
             onChange={handleChange}
             required={true}
