@@ -7,6 +7,8 @@ import Home from "./Components/Pages/Home";
 import Contact from "./Components/Pages/Contact";
 import CertificateVerify from "./Components/Pages/Certificate Verification/CertificateVerify";
 import AdminPanel from "./Components/Pages/Admin Panel/AdminPanel";
+import Register from "./Components/Pages/Register/Register";
+import Login from "./Components/Pages/Login/Login";
 
 function App() {
   return (
@@ -19,11 +21,13 @@ function App() {
             <Route path="/Contact" element={<Contact />} />
             <Route path="/CertificateVerify" element={<CertificateVerify/>} />
             <Route path="/AdminPanel" element={<AdminPanel/>} />
+            <Route path="/Register" element={<Register/>} />
+            <Route path="/Login" element={<Login/>} />
           
           </Routes>
         </main>
         <footer className="footer">
-          <div className="">All rights reserved!</div>
+          <div className="">Copyright © 2001 ACCEd Qadian, India, All rights reserved.</div>
         </footer>
       </BrowserRouter>
     </div>
