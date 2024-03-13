@@ -15,9 +15,16 @@ const Login = (props) => {
     variant:"",
     value:false
   });
+
   const [loggedinuser, setLoggedinuser] = useState();
 
+function Redirecttologedin() {
+  window.location.href = "http://localhost:3000/CertificateVerify";
+}
 
+function RedirecttoAdminpanel() {
+  window.location.href = "http://localhost:3000/Adminpanel";
+}
 
   const handleLogin = async(e) => {
     e.preventDefault();
@@ -32,6 +39,11 @@ const Login = (props) => {
           variant:"success",
           value:true
         })
+        if (response.data.isAdmin) {
+          RedirecttoAdminpanel()
+        }else{
+          Redirecttologedin()
+        }
   } catch (error) {
       console.log(error)
       setAlert({
