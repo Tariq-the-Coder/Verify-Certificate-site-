@@ -40,8 +40,8 @@ const Certificate = ({ searchResult }) => {
               as an acknowledgement of the proficiency acquired in the course of
               study. the main topic(s) covered by him/her are{" "}
               <b>
-                <u>{searchResult.course}</u>.
-              </b>
+                <u>{searchResult.course}</u>,
+              </b> He/She joined the Institude from <b>{searchResult.startdate}</b> to <b>{searchResult.enddate}</b>.
             </h6>
           </div>
 
