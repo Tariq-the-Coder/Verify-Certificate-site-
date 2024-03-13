@@ -45,6 +45,7 @@ const Register = () => {
         }
   };
 
+  
   return (
     <Container className="LoginContainer">
     {alert.value && 
