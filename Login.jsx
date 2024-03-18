@@ -29,8 +29,9 @@ function RedirecttoAdminpanel() {
   const handleLogin = async(e) => {
     e.preventDefault();
     console.log(email, password);
+    const newemail = email.toLowerCase()
     try {
-      const response = await axios.post("http://localhost:2000/login", {email, password})
+      const response = await axios.post("http://localhost:2000/login", {newemail, password})
       localStorage.setItem('user', JSON.stringify(response.data));
       setLoggedinuser(response.data)
       console.log(response)
@@ -56,6 +57,7 @@ function RedirecttoAdminpanel() {
 
 
   return (
+    <div className="login-box">
     <Container className="LoginContainer">
     {alert.value && 
     <Alert variant={alert.variant} onClose={()=>{setAlert({value:false})}} dismissible>
@@ -63,7 +65,7 @@ function RedirecttoAdminpanel() {
     </Alert>
     }
       <h2>Login</h2>
-      <Form onSubmit={handleLogin} className="w-50">
+      <Form onSubmit={handleLogin} className="">
         <Form.Group controlId="formBasicemail">
           <Form.Label>Email Address</Form.Label>
           <Form.Control
@@ -72,6 +74,7 @@ function RedirecttoAdminpanel() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required={true}
+            autoComplete="off"
           />
         </Form.Group>
         <Form.Group controlId="password">
@@ -96,6 +99,7 @@ function RedirecttoAdminpanel() {
         </div>
       </Form>
     </Container>
+    </div>
   );
 };
 
