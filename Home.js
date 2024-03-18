@@ -4,6 +4,7 @@ import img1 from "./images/computer-center.jpg";
 import img2 from "./images/certificate.jpg";
 import img3 from "./images/courses.jpg";
 import img4 from "./images/education.jpg";
+import img5 from "./images/acced2.jpg";
 
 const Home = () => {
   const [courseName, setCourseName] = useState([
@@ -30,7 +31,7 @@ const Home = () => {
   ]);
   return (
     <div>
-      <Carousel data-bs-theme="dark">
+      <Carousel className="carousel-box" data-bs-theme="dark">
         <Carousel.Item>
           <img
             className="d-block "
@@ -39,7 +40,7 @@ const Home = () => {
             style={{ width: "30%" }}
           />
           <Carousel.Caption>
-            <h5>Ahmadiyya Center for Computer Education (Qadian)</h5>
+            <h4>Ahmadiyya Center for Computer Education (Qadian)</h4>
             <p>
               Fully Air Conditioned Lab. Free Internet Facility Advanced courses
               at nominal Fee.
@@ -54,7 +55,7 @@ const Home = () => {
             style={{ width: "30%" }}
           />
           <Carousel.Caption>
-            <h5>Get a Certificate</h5>
+            <h4>Get a Certificate</h4>
             <p>You will get a Certificate after completing a course.</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -66,7 +67,7 @@ const Home = () => {
             style={{ width: "30%" }}
           />
           <Carousel.Caption>
-            <h5>Courses</h5>
+            <h4>Courses</h4>
             <p>Here are various courses you can opt according to your need.</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -76,7 +77,7 @@ const Home = () => {
 
       <section className="my-5 mt-5" id="courses">
         <div class="text-center">
-          <h1 class="main-heading">Our Courses</h1>
+          <h2 class="main-heading">Our Courses</h2>
         </div>
 
         <div class="container my-5 ">
@@ -90,7 +91,7 @@ const Home = () => {
 
       <section className="my-5 mt-5" id="">
         <div class="text-center">
-          <h1 class="main-heading">Our Features</h1>
+          <h2 class="main-heading">Our Features</h2>
         </div>
 
         <div class="container my-5 features-container">
@@ -111,7 +112,7 @@ const Home = () => {
 
       <section className="my-5 mt-5" id="">
         <div class="text-center">
-          <h1 class="main-heading">Our Objectives</h1>
+          <h2 class="main-heading">Our Objectives</h2>
         </div>
 
         <div class="container my-5 objective-container">
@@ -129,6 +130,28 @@ const Home = () => {
               of the nation.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="my-5 mt-5" id="">
+        <div class="text-center">
+          <h2 class="main-heading">About Us</h2>
+        </div>
+
+        <div class="container my-5 aboutus-box ">
+          <div>
+            <h4>Ahmadiyya Center for Computer Education (ACCEd)</h4>
+            <p>(ISO Affiliated Center and NSIC Approved Computer Courses)</p>
+            <p>
+              Ahmadiyya Center for Computer Education has been providing the
+              best Computer Courses in Qadian for more than 16 years. These
+              courses are offered to students from 5th to postgraduate level to
+              help youngsters find employment in India and Abroad. Call@01872222900
+            </p>
+          </div>
+        <div className="img-box2">
+          <img src={img5} alt="" />
+        </div>
         </div>
       </section>
     </div>
