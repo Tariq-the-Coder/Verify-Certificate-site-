@@ -15,7 +15,7 @@ const Navbar_Main = () => {
     }
   }, []);
 
-  console.log(loggedinuser)
+  // console.log(loggedinuser)
 
   const handlelogout =()=>{
     localStorage.removeItem('user');
@@ -29,7 +29,7 @@ const Navbar_Main = () => {
           <Link className="navbar-brand" to={"/"} > ACCEd</Link>
           <Nav className="me-auto">
           <Link className='nav-link' to={"/"} >Home</Link>
-          <Link className='nav-link' to={"/CertificateVerify"} >CertificateVerify</Link>
+          <Link className='nav-link' to={"/CertificateVerify"} >CertificateCheck</Link>
           <Link className='nav-link' to={"/Contact"} >Contact</Link>
           </Nav>
           <Nav>
